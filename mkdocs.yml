@@ -1,6 +1,6 @@
-site_name: CIDR Metagenomics
-site_url: https://CIDR-network-hub.github.io/
-repo_url: https://github.com/GSTT-CIDR/network_hub
+site_name: CIDR analysis and SOP hub
+site_url: https://gstt-cidr.github.io/analysis_guides/
+repo_url: https://github.com/GSTT-CIDR/analysis_guides.git
 site_author: CIDR
 theme:
   name: material
@@ -58,15 +58,4 @@ plugins:
 
 nav:
   - Introduction: index.md
-  - Lab Resources: 
-    - Lab protocols: lab_protocols.md
-    - Reagents: reagents.md
-  - Bioinformatics:
-    - Outline: bioinformatics_outline.md
-    - Installation: bioinformatics_install.md
-    - Starting the metagenomics workflow: running_metagenomics_workflow.md
-    - Query a classification: running_organism_query.md
-    - Deployment alternatives: alternative_deployment.md
-  - Analysis: 
-    - Clinical interpretation: clinical_interpretation.md
     
