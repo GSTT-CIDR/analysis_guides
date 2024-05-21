@@ -1,0 +1,72 @@
+site_name: CIDR Metagenomics
+site_url: https://CIDR-network-hub.github.io/
+repo_url: https://github.com/GSTT-CIDR/network_hub
+site_author: CIDR
+theme:
+  name: material
+
+markdown_extensions:
+  - attr_list
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            docstring_section_style: spacy
+            show_source: false
+  - with-pdf:
+      output_path: cidr_metagenomics.pdf
+      cover_subtitle: ""
+      debug_html: true
+      show_anchors: true
+      verbose: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - skip-lightbox
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+
+nav:
+  - Introduction: index.md
+  - Lab Resources: 
+    - Lab protocols: lab_protocols.md
+    - Reagents: reagents.md
+  - Bioinformatics:
+    - Outline: bioinformatics_outline.md
+    - Installation: bioinformatics_install.md
+    - Starting the metagenomics workflow: running_metagenomics_workflow.md
+    - Query a classification: running_organism_query.md
+    - Deployment alternatives: alternative_deployment.md
+  - Analysis: 
+    - Clinical interpretation: clinical_interpretation.md
+    
